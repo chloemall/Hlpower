@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hlpower.co.ke/sitemap.xml

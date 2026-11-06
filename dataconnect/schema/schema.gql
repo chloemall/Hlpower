@@ -1,0 +1,28 @@
+type User @table {
+  displayName: String!
+  email: String!
+  createdAt: Timestamp!
+  photoUrl: String
+}
+
+type Order @table {
+  orderNumber: String!
+  orderDate: Date!
+  totalAmount: Float!
+  status: String!
+  customerName: String
+  description: String
+  dueDate: Date
+  user: User!
+}
+
+type Transaction @table {
+  transactionDate: Date!
+  amount: Float!
+  transactionType: String!
+  createdAt: Timestamp!
+  description: String
+  referenceNumber: String
+  user: User!
+  order: Order!
+}
